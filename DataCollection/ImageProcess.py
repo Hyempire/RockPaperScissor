@@ -52,7 +52,7 @@ try:
             # Hand Tracking
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             results = hands.process(image)
-            image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+            image = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
 
             image.flags.writeable = True
 
@@ -71,7 +71,7 @@ try:
                 print(f"center color {hand_color}")
 
             # =========== 인자값들을 바꿔보며 그나마 잘 나오는 값을 넣어주세요 ========== #
-            resultImage = ImageProcessing.DeleteBackground(image, hand_color, 20,50,300, 80)
+            resultImage, mask = ImageProcessing.DeleteBackground(image, hand_color, 20,50,300, max_area=300)
 
             # 새로운 파일들 저장
             new_path = f'./{your_name}/{classes[idx]}/{classes[idx]}_{j}.png'

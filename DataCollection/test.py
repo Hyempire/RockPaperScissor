@@ -17,6 +17,7 @@ hands = mp_hands.Hands(max_num_hands = 1,
                  min_tracking_confidence = 0.5)
 
 # ========== 테스트 해보고싶은 파일의 경로를 여기다가 넣어주세용 ========== #
+
 image = cv2.imread("./hyemi/rock_captures/hyemi_rock_1.png")
 height, width, _ = image.shape
 
@@ -34,7 +35,8 @@ for hand_landmarks in results.multi_hand_landmarks:
 hand_color = np.average(colors, axis=0)
 print(hand_color)
 
-resultImage = ImageProcessing.DeleteBackground(image, hand_color, 10,50,300, max_area=40)
+resultImage, mask = ImageProcessing.DeleteBackground(image, hand_color, 10,50,300, max_area=40)
 
 # ==================== 저장할 경로를 설정해주세용 ==================== #
-cv2.imwrite("rock0.png", resultImage)
+cv2.imwrite("result.png", resultImage)
+cv2.imwrite("mask.png", resultImage)
