@@ -9,7 +9,7 @@ import os
 import ImageProcessing
 
 # ===== 파일 이름 설정!!!! 각자 바꿔줘야 하는 부분!! ===== #
-your_name = "hyemi2"
+your_name = "sunghun"
 # ===================================================== #
 
 # ===== Mediapipe, Camera Settings ===== #

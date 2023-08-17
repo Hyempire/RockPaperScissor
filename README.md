@@ -43,6 +43,14 @@
 >     - `ImageProcessing.py` 코드 안에 함수 인자들에 대한 설명을 적어놨습니다.
 > - `test.py` : ImageProcess.py 파일을 계속 돌리면서 테스트하기 귀찮다면, 이미지를 하나씩만 넣어서 올바른 인자를 찾아볼 수 있는 코드입니다. 하지만 이미지 하나에서 배경이 잘 제거돼었다고 다른 이미지에서 잘 제거될 거라는 보장은 없..
 
+### 1 - 3. 데이터셋 폴더 구성
+> `Perprocess` dir
+>
+> `Dataset_bgO_flipO` : paper 2,224 | rock 2,252 | scissor 2,300 <br>
+> `Dataset_bgO_flipX` : paper 1,112 | rock 1,126 | scissor 1,150 <br>
+> `Dataset_bgX_flipO` : paper 2,218 | rock 2,232 | scissor 2,290 <br>
+> `Dataset_bgX_flipX` : paper 1,109 | rock 1,116 | scissor 1,145 <br>
+
 ## 2. 신경망 모델링 + 학습
 
 class 3짜리 분류 문제
