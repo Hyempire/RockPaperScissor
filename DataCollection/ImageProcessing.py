@@ -50,7 +50,6 @@ def DeleteBackground(roi, center_color, thresH, thresS, thresV, max_area = 0):
     cv2.fillPoly(blank_image, selected_contours, color = (255,255,255))
     mask = blank_image
 
-    
     # 테두리 확장
     kernel = np.ones((4,4),np.uint8)
     #extrapolate the hand to fill dark spots within
@@ -59,11 +58,6 @@ def DeleteBackground(roi, center_color, thresH, thresS, thresV, max_area = 0):
     # 빈틈 메꾸기
     kernel = np.ones((5,5),np.uint8)
     mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
-    
-    
-    
-    # # 자잘한 픽셀 없애기
-    # mask = cv2.medianBlur(mask, 5) 
 
     # Masked image
     hand_segmented = cv2.bitwise_and(roi, roi, mask=mask)

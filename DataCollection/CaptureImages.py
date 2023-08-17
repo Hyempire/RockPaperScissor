@@ -9,9 +9,9 @@ import os
 import time
 
 # ===== 파일 이름 설정!!!! 각자 바꿔줘야 하는 부분!! ===== #
-your_name = "hyemi3"     # 이름
+your_name = "hyemi2"     # 이름
 hand_pose = "scissor"     # rock, paper, scissor
-capture_count = 1      # 첫 번째 실행 땐 1, 두 번째 실행 땐 51로 고쳐주세요
+capture_count = 51      # 첫 번째 실행 땐 1, 두 번째 실행 땐 51로 고쳐주세요
 # ===================================================== #
 
 if not os.path.exists(f'./{your_name}'):

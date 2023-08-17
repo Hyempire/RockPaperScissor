@@ -18,7 +18,7 @@ hands = mp_hands.Hands(max_num_hands = 1,
 
 # ========== 테스트 해보고싶은 파일의 경로를 여기다가 넣어주세용 ========== #
 
-image = cv2.imread("./hyemi/rock_captures/hyemi_rock_1.png")
+image = cv2.imread("DataCollection\heejae\paper_captures\heejae_paper_6.png")
 height, width, _ = image.shape
 
 # Hand Tracking
@@ -38,5 +38,5 @@ print(hand_color)
 resultImage, mask = ImageProcessing.DeleteBackground(image, hand_color, 10,50,300, max_area=40)
 
 # ==================== 저장할 경로를 설정해주세용 ==================== #
-cv2.imwrite("result.png", resultImage)
-cv2.imwrite("mask.png", resultImage)
+cv2.imwrite("DataCollection\heejae\result.png", resultImage)
+cv2.imwrite("DataCollection\heejae\mask.png", resultImage)

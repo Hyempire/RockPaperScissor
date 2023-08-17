@@ -9,7 +9,7 @@ import os
 import ImageProcessing
 
 # ===== 파일 이름 설정!!!! 각자 바꿔줘야 하는 부분!! ===== #
-your_name = "hyemi"
+your_name = "hyemi2"
 # ===================================================== #
 
 # ===== Mediapipe, Camera Settings ===== #
@@ -71,7 +71,7 @@ try:
                 print(f"center color {hand_color}")
 
             # =========== 인자값들을 바꿔보며 그나마 잘 나오는 값을 넣어주세요 ========== #
-            resultImage, mask = ImageProcessing.DeleteBackground(image, hand_color, 20,50,300, max_area=300)
+            resultImage, mask = ImageProcessing.DeleteBackground(image, hand_color, 30,60,300, max_area=300)
 
             # 새로운 파일들 저장
             new_path = f'./{your_name}/{classes[idx]}/{classes[idx]}_{j}.png'
