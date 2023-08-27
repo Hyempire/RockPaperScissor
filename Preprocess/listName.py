@@ -5,16 +5,17 @@
 
 import os
 
-pose_name = "rock"
-folder_path = "Preprocess/Dataset_bgX_flipO/rock"
+folder_path = "Preprocess/Final_dataset"
 files = os.listdir(folder_path)
 
 for i, file_name in enumerate(files):
     old_path = os.path.join(folder_path, file_name)
-    
-    new_file_name = f"{pose_name}_{i}.png"
+
+    num = file_name.split(".")[0]
+    pose_name = file_name.split("_")[1].split(".")[0]
+    new_file_name = f"{num}_{pose_name}.png"
     new_path = os.path.join(folder_path, new_file_name)
-    
+
     os.rename(old_path, new_path)
     print(f"Renamed '{file_name}' to '{new_file_name}'")
 

@@ -36,7 +36,7 @@ class RPS_Dataset(Dataset):
         filepath = osp.join(self.data_dir, filename)
         img = Image.open(filepath)
         img = self.transform(img)
-        label_check = filename.split("_")[0]
+        label_check = filename.split("_")[1].split(".")[0]
         if label_check == "paper":
             label = 0
         elif label_check == "rock":
